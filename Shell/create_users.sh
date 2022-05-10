@@ -20,7 +20,7 @@ for user in $(echo "${USER_LIST}"); do
 
         # User doesn't exist
         home="/home/${user}"
-        useradd -d "${home}" -m -s /bin/bash "${user}"
+        useradd -c "${user}" -d "${home}" -m -s /bin/bash "${user}"
 
         # Set user's initial password
         password="hello@${user}"
