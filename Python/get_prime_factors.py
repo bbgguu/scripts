@@ -2,11 +2,13 @@
 #
 # Get all prime factors of a number.
 
+import math
+
 def get_min_prime_factor(num, start=2):
     num = abs(num)
-    end = num // 2
+    end = math.isqrt(num)
 
-    # If num is not prime, it's minimum prime factor must be no more than num // 2.
+    # If num is not prime, it's minimum prime factor must be no more than the square root of num.
     while start <= end:
         if num % start == 0:
             return start
